@@ -28,12 +28,19 @@ export type handleCancelProp = {
   handleCancel: () => void
 }
 
+export type ProductDialogProps = UseDialogProps & {
+  pid: string;
+  product: Product;
+  handleUpdateProduct: (pid: string, updatedProduct: Product) => Promise<void>;
+};
+
 export type UpdateInputProp = {
   updatedProduct: Product
   handleUpdateProduct: (pid: string, updatedProduct:Product) => Promise<void>
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   pid: string
   dialog: CreateOverlayReturn<UseDialogProps>
+  handleCancel: () => void
 }
 
 export type ProductState = {
