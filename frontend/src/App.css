@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.image-path {
+    backgroundcolor: #0000ff;
+    width: 300px
+    clip-path: path("M   Z")
+};
