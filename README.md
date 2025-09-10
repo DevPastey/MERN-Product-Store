@@ -1,4 +1,6 @@
 <div align="center">
+git 
+<img src="../Product-Store-(MERN)/frontend/assets/images/productstorecatalog.png.png" alt="Product Manager App Banner" />
 
 # 📦 Product Manager App  
 
@@ -7,7 +9,7 @@
 A modern React + Chakra UI application to **manage products** with style ✨.  
 Easily add, edit, update, and delete products with a clean UI and smooth modal dialogs.  
 
-<img src="https://via.placeholder.com/1000x350.png?text=Product+Manager+App+Banner" alt="Product Manager App Banner" />
+
 
 
 </div>
@@ -22,7 +24,7 @@ Easily add, edit, update, and delete products with a clean UI and smooth modal d
 - 🔔 **Toasts – instant** feedback with success/error messages
 - ⚡ **Optimized State** – powered by useProductStore (Zustand)
   
-  --- 
+--- 
 ### 🖼️ Preview
 Here’s a sneak peek 👇
 
