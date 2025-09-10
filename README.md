@@ -1,6 +1,6 @@
 <div align="center">
-git 
-<img src="../Product-Store-(MERN)/frontend/assets/images/productstorecatalog.png.png" alt="Product Manager App Banner" />
+
+<img src="./assets/images/productstorecatalog.png" alt="Product Manager App Banner" />
 
 # 📦 Product Manager App  
 
