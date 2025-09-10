@@ -113,7 +113,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"cross-env NODE_ENV=production node backend/server.js",
+    "start": "cross-env NODE_ENV=production node backend/server.js",
     "dev": "cross-env NODE_ENV=development  nodemon backend/server.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend && npm install --save-dev cross-env"
   },
@@ -123,6 +123,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/node": "^24.3.1",
     "cross-env": "^10.0.0",
     "nodemon": "^3.1.10"
   }
