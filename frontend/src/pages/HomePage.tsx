@@ -25,15 +25,20 @@ const HomePage = () => {
             base: "column",
             sm: "row"
         }}
+
+        
+        
       >
-        <VStack spaceX={8}>
+        <VStack spaceX={8}  mr={{base: 6}} >
           <Text
-          fontSize={'lg'}
+          fontSize={'xl'}
           fontWeight={"bold"}
           textAlign={"center"}
           bgClip={"text"}
           className="bg-gradient-to-r from-cyan-400 to-blue-500"
           paddingTop={8}
+          
+          
         >
             Current Products 🚀
           </Text>
@@ -76,10 +81,6 @@ const HomePage = () => {
         
             
       </Flex>
-      
-            <Box className="image-path">
-              {/* <Image src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRzaGlydHxlbnwwfHwwfHx8MA%3D%3D" alt="name" w="full" h={"200px"} objectFit="cover" /> */}
-            </Box>
     </Container>
 
     

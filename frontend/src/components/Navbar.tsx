@@ -14,39 +14,34 @@ const Navbar = () => {
         alignItems={"center"} 
         justifyContent={"space-between"}
         flexDir={{
-            base: "column",
-            sm: "row"
+          base: "row",
+          sm: "row"
         }}
       >
         <Text
-            fontSize={{ base: "22", sm: "18" }}
-            fontWeight={"bold"}
-            textTransform={"uppercase"}
-            textAlign={"center"}
-            bgClip={"text"}
-            className="bg-gradient-to-r from-cyan-400 to-blue-500"
-        >
-            <Link to={"/"}> Product Store 🛒</Link>
+          fontSize={{ base: "22", sm: "18" }}
+          fontWeight={"bold"}
+          textTransform={"uppercase"}
+          textAlign={"center"}
+          bgClip={"text"}
+          className="bg-gradient-to-r from-cyan-400 to-blue-500"
+      >
+          <Link to={"/"}> Product Store 🛒</Link>
         </Text>
 
         <HStack  spaceX={2} alignItems={"center"} justifyContent={"center"}>
-            <Link to={"/create"}>
-                <Button _hover={{ bg: hoverBg, transform: "scale(1.05)"}} bg={useColorModeValue("none", "gray.500")}  size={"2xs"}>
-                    <BsPlusSquare className={colorMode === 'light' ? 'text-black' : 'text-white'} />
-                    
-                </Button>
-            </Link>
+          <Link to={"/create"}>
+            <Button _hover={{ bg: hoverBg, transform: "scale(1.05)"}} bg={useColorModeValue("none", "gray.500")}  size={"2xs"}>
+              <BsPlusSquare className={colorMode === 'light' ? 'text-black' : 'text-white'} />
+            </Button>
+          </Link>
 
-            <div>
-                <Button _hover={{ bg: hoverBg, transform: "scale(1.05)"}} bg={useColorModeValue("none", "gray.500")} size={"2xs"} onClick={toggleColorMode}>
-                  {colorMode === 'light' ? <LuMoon className={colorMode === 'light' ? 'text-black' : 'text-white'}/>: <LuSun className={colorMode === 'dark' ? 'text-white' :'text-black'} />}
-                </Button>
-            </div>
+          <div>
+            <Button _hover={{ bg: hoverBg, transform: "scale(1.05)"}} bg={useColorModeValue("none", "gray.500")} size={"2xs"} onClick={toggleColorMode}>
+              {colorMode === 'light' ? <LuMoon className={colorMode === 'light' ? 'text-black' : 'text-white'}/>: <LuSun className={colorMode === 'dark' ? 'text-white' :'text-black'} />}
+            </Button>
+          </div>
 
-            
-
-            
-   
         </HStack>
 
       </Flex>
