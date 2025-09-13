@@ -1,7 +1,7 @@
 import { useColorModeValue } from "@/components/ui/color-mode"
 import { Toaster, toaster } from "@/components/ui/toaster";
 import { useProductStore } from "@/store/product";
-import type { Product } from "@/types/types";
+import type { NewProduct } from "@/types/types";
 import { Box, Container, Heading, VStack, Input, Button,  } from "@chakra-ui/react"
 import { useState } from "react"
 
@@ -9,11 +9,10 @@ import { useState } from "react"
 
 const CreatePage = () => {
 
-  const [newProduct, setNewProduct] = useState<Product>({
+  const [newProduct, setNewProduct] = useState<NewProduct>({
     name: '',
     price: '',
     imageURL: '',
-    _id: "",
   });
 
 
@@ -63,7 +62,6 @@ const CreatePage = () => {
           name: "",
           price: '',
           imageURL: "",
-          _id: "",
         })
       }
 

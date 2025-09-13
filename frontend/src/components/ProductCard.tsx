@@ -15,7 +15,7 @@ const ProductCard = ({ product, pid, name, price, imageURL }: ProductCardProp) =
   const dialog = ProductDialog;
 
   const handleUpdateProduct = async (pid: string, updatedProduct: Product) => {
-    const { success, message } = await updateProduct(pid, updatedProduct);
+    const { success, message } = await updateProduct(updatedProduct, pid);
 
     toaster.create({
       title: success ? "Success" : "Error",

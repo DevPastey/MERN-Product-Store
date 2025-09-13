@@ -1,12 +1,12 @@
 
-import type { Product, ProductState } from '@/types/types';
+import type { NewProduct, Product, ProductState } from '@/types/types';
 import {create} from 'zustand';
 
 export const useProductStore = create<ProductState>((set) => ({
     products: [],
     setProduct: (products : Product[]) => set({products}),
     createProduct: async (
-        newProduct: Product
+        newProduct: NewProduct
     ): Promise<{ success: boolean; message?: string }> => {
         if (!newProduct.name || !newProduct.price || !newProduct.imageURL) {
             return {
@@ -43,7 +43,7 @@ export const useProductStore = create<ProductState>((set) => ({
         set({ products: data.data});
     },
 
-    updateProduct: async(pid: string, updatedProduct:Product) => {
+    updateProduct: async(updatedProduct:Product, pid: string, ) => {
         const res = await fetch(`/api/products/${pid}`, {
             method: "PUT",
             headers: {
@@ -69,7 +69,7 @@ export const useProductStore = create<ProductState>((set) => ({
             }
     },
 
-    deleteProduct: async(pid: string) => {
+    deleteProduct: async(pid?: string) => {
         const res = await fetch(`/api/products/${pid}`, {
             method: "DELETE",
         })
