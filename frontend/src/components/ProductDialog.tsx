@@ -1,4 +1,4 @@
-import type { NewProduct, ProductDialogProps } from "@/types/types";
+import type {Product, ProductDialogProps } from "@/types/types";
 import { HStack, Input, Dialog, Portal, createOverlay, VStack, Button, Flex} from "@chakra-ui/react"
 import { useState } from "react";
 
@@ -6,7 +6,7 @@ import { useState } from "react";
 const ProductDialog = createOverlay<ProductDialogProps>(
   ({ onOpenChange, open, handleUpdateProduct, pid, product, ...rest }) => {
       
-    const [updatedProduct, setUpdatedProduct] = useState<NewProduct>(product);
+    const [updatedProduct, setUpdatedProduct] = useState<Product>(product);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = e.target;

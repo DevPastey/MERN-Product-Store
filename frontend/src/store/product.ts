@@ -43,7 +43,7 @@ export const useProductStore = create<ProductState>((set) => ({
         set({ products: data.data});
     },
 
-    updateProduct: async(updatedProduct:Product, pid: string, ) => {
+    updateProduct: async(updatedProduct:NewProduct, pid: string, ) => {
         const res = await fetch(`/api/products/${pid}`, {
             method: "PUT",
             headers: {
@@ -69,7 +69,7 @@ export const useProductStore = create<ProductState>((set) => ({
             }
     },
 
-    deleteProduct: async(pid?: string) => {
+    deleteProduct: async(pid: string) => {
         const res = await fetch(`/api/products/${pid}`, {
             method: "DELETE",
         })
