@@ -29,7 +29,7 @@ const HomePage = () => {
         
         
       >
-        <VStack spaceX={8}  mr={{base: 6}} >
+        <VStack> 
           <Text
           fontSize={'xl'}
           fontWeight={"bold"}
@@ -49,6 +49,7 @@ const HomePage = () => {
             gap="40px"
             w={"full"}
             mt={4}
+            
           > 
             {products.map((p) => ( <ProductCard product={p} key={p._id} pid={p._id} name={p.name} price={p.price} imageURL={p.imageURL} /> ) )}
           </SimpleGrid>
